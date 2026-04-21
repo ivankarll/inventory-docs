@@ -1,0 +1,40 @@
+site_name: Inventory Management System
+theme:
+  name: material
+  palette: 
+    # Light/Dark mode toggle
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal        # Changes the header color
+      accent: indigo       # Changes the color of links/buttons
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto          # Main text font
+    code: Roboto Mono     # Code block font
+
+nav:
+  - Introduction: index.md
+  - Getting Started:
+      - Installation Guide: setup/install.md
+      - Configuration: setup/config.md
+  - User Manual:
+      - Overview: manual/overview.md
+      - Admin Role: manual/admin.md
+      - Staff Role: manual/staff.md
+      - Viewer Role: manual/viewer.md
+  - Inventory Logic:
+      - SKU Management: logic/skus.md
+      - Database Schema: logic/database.md
+  - Troubleshooting: troubleshooting.md
+  - Maintenance:
+      - Backups: maintenance/backups.md
+      - Updating System: maintenance/updates.md
