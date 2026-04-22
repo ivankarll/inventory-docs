@@ -5,13 +5,12 @@ This guide covers the basic steps to get the inventory system running in your lo
 ## Prerequisites
 
 Before starting, ensure you have the following installed:
+
 * **PHP**: (e.g., 8.2+)
 * **Composer**: For PHP dependency management.
 * **Node.js & npm**: For compiling frontend assets.
 * **MySQL**: Or an equivalent SQL database server.
-
 ---
-
 ## Quick Setup
 
 Choose the tab below that matches your operating system:

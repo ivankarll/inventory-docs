@@ -333,3 +333,100 @@ kbd, .md-typeset kbd {
   padding: 0.1rem 0.4rem;
   font-size: 0.82em;
 }
+
+
+/* ---------- Tables ---------- */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(29,78,216,0.06);
+}
+
+/* 1. Remove blue gradient, set text to bold and black */
+.md-typeset table:not([class]) th {
+  background: transparent !important; /* Removes the blue */
+  color: var(--ink-900) !important;   /* Sets text to your dark black/ink color */
+  font-weight: 700;
+  border: none;
+  border-bottom: 1px solid var(--line); /* Keeps a subtle line under headers */
+}
+
+/* 2. Remove alternate row colors (Zebra striping) */
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background: transparent !important; 
+}
+
+/* 3. Keep your cell borders consistent */
+.md-typeset table:not([class]) td { 
+  border-color: var(--line); 
+}
+
+/* Dark mode adjustment to keep text readable */
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  color: #ffffff !important;
+  border-bottom-color: rgba(255,255,255,0.1);
+}
+
+.md-typeset pre > code {
+    background-color: #f5f5f5 !important;
+    color: var(--ink-700) !important;
+    box-shadow: none !important;
+    border: 1px solid var(--line);
+}
+
+/* Fixes code inside list items or tabs that might be inheriting wrong colors */
+.md-typeset code {
+    background-color: rgba(0,0,0,0.05);
+    color: var(--brand-800);
+}
+
+.tabbed-set label {
+    color: var(--ink-500) !important;
+}
+
+.tabbed-set input:checked + label {
+    color: var(--brand-700) !important;
+    border-color: var(--brand-700) !important;
+}
+
+/* Dark Mode Overrides for the Gray Code Blocks */
+[data-md-color-scheme="slate"] .md-typeset pre > code {
+    background-color: #1a2333 !important;
+    color: #e6eefc !important;
+    border-color: rgba(255,255,255,0.1);
+}
+
+/* ---------- Tab Label Colors ---------- */
+
+/* Light Mode: Force labels to be dark/black */
+[data-md-color-scheme="default"] .tabbed-labels > label {
+    color: var(--ink-900) !important;
+}
+
+/* Dark Mode: Force labels to be pure white */
+[data-md-color-scheme="slate"] .tabbed-labels > label {
+    color: #ffffff !important;
+}
+
+/* ---------- Code Content Colors ---------- */
+
+/* Light Mode: Make code text black */
+[data-md-color-scheme="default"] .md-typeset pre > code {
+    color: #000000 !important;
+}
+
+.md-typeset pre code .nb, 
+.md-typeset pre code .nf {
+    color: #448aff !important;
+}
+
+/* Dark Mode: Make code text white */
+[data-md-color-scheme="slate"] .md-typeset pre > code {
+    color: #ffffff !important;
+}
+
+/* Specific fix for "Bash/PowerShell" keywords that might still be gray */
+.md-typeset pre code span {
+    color: inherit  !important; /* Forces syntax highlighting to follow the white/black rule */
+}

@@ -42,6 +42,7 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -65,9 +66,9 @@ nav:
       - Configuration: setup/config.md
   - User Manual:
       - Overview: manual/overview.md
+      - Super Admin Role: manual/super-admin.md
       - Admin Role: manual/admin.md
-      - Staff Role: manual/staff.md
-      - Viewer Role: manual/viewer.md
+      - Employee Role: manual/employee.md
   - Inventory Logic:
       - SKU Management: logic/skus.md
       - Database Schema: logic/database.md
